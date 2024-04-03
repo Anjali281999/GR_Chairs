@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compaible"content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.R Chairs</title>
+    <link rel="icon" type="image/x-icon" href="./GRChairs/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/> 
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #edd6d6;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px;
+            text-align: center;
+        }
+       header input[type=text]{
+           padding: 8px;
+           margin-top: 8px;
+           font-size: 17px;
+           border:none;
+        }
+        header .search button{
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #edd6d6;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        header .search button:hover{
+            background: green;
+        }
+        header .search i{
+            padding: 4px;
+        }
+
+        .business-name {
+            color: #f1ebebab;
+            font-family: 'Times New Roman', Times, serif;
+            transition:0.3s ease;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-right: 450px;
+            margin-left: 0%;
+            /* Adjust the margin as needed */
+        }
+
+        header div {
+            margin-right: 50px;
+            /* Adjust the margin as needed */
+        }
+
+        header img {
+            width: 160px;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            margin-left: 50px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #45a049;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+            align-items: center;
+        }
+        .button a{
+           align-items: center;
+           background-clip: #fa6400;
+           border: 2px  solid transparent;
+           color:#060319;
+           cursor:pointer;
+           display: inline-flex;
+           font-family: 'Times New Roman', Times, serif;
+           font-size: 16px;
+           font-weight: 900;
+           justify-content: center;
+           line-height: 1.25;
+           margin: 0;
+           min-height:2rem;
+           padding-top: 15px;
+           padding-bottom: 5px;
+           padding-right: 30px;
+           padding-left: 40px;
+           position: relative;
+           text-decoration: none;
+           transition: all 20ms;
+           user-select:none;
+           -webkit-user-select: none;
+           touch-action: manipulation;
+           vertical-align: baseline;
+           width: auto;
+        }
+        .button a:hover{
+            color: rgb(20, 44, 161);
+        }
+         .button{
+            background-color: #044c4b;
+            box-shadow: #043748;
+        }
+        .button:active{
+            background-color: #198fce;
+            box-shadow: rgba(0,0,0,0.06);
+            transform: translateY(0);
+        }
+
+            /* Accessories */
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+            margin-top: 10px;
+            margin-left: 9%;
+            align-items: center;
+            column-gap: 60px;
+            row-gap: 30px;
+        }
+
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            position: relative;
+            width: 240px;
+            /* Decreased container width */
+            height: 280px;
+            /* Decreased container height */
+           
+        }
+
+        .product:hover {
+            border: 2px solid #45a049;
+            /* Change the border color to your desired green color */
+        }
+
+
+        .product img {
+            max-width: 100%;
+            max-height: 200px;
+            /* Decreased image height */
+            margin-left: 30px;
+            cursor: pointer;
+            /* Add cursor pointer to indicate it's clickable */
+        }
+
+        .product-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .product h3,
+        .product p {
+            margin: 0;
+        }
+
+        .product p {
+            color: #888;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            position: relative;
+            width: 200px;
+            /* Decreased container width */
+            height: 290px;
+            /* Decreased container height */
+        }
+
+        .product:hover {
+            border: 2px solid #053f08;
+            /* Change the border color to your desired green color */
+        }
+
+
+        .product img {
+            max-width: 100%;
+            max-height: 200px;
+            /* Decreased image height */
+            margin-left: 30px;
+            cursor: pointer;
+            /* Add cursor pointer to indicate it's clickable */
+        }
+
+        .product-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .product h3,
+        .product p {
+            margin: 0;
+        }
+
+        .product p {
+            color: #888;
+        }
+
+        .buy-now-btn {
+            background-color: #45a049;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: right;
+            /* Adjust the height as needed */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="./GRChairs/logo.jpg" alt="">
+        </div>
+        <h2>G.R CHAIRS</h2>
+        <div class="search" >
+            <input type="text" placeholder="Search for Products,brands and more...">
+            <button class="normal"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <nav>
+            <a href="admin-or-user-page.html"><i class="fa-solid fa-house"></i></a>
+            <a href="checkout-page.html"><i class="fa-solid fa-check"></i></a>
+            <a href="contact-us-page.html"><i class="fa-solid fa-phone"></i></a>
+            <a href="#" id="logoutLink"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </nav>
+        </div>
+    </header>
+
+
+		<div class="button">
+        <button><a href="front-page-login.html" class="chairs-button">Chairs</a></button>
+       <button> <a href="services-page.html" class="services-button">Services</a></button>
+    </div>
+
+    <div class="products-container">
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+                <div class="product-text">
+                <img src="./GRChairs/chair photos/BUTTERFLY HB.jpeg" alt="">
+                <h3>CHAIR BUTTERFLY HB</h3>
+            
+                
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i><br>
+                <a href="gr chair 31.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+
+
+        <!-- Repeat the product div for each product -->
+
+       
+        
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/BONAI Hb.jpg" alt="">
+                <h3>CHAIR BONAI HB</h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="gr chair 35.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/MARVEL 2(SYNCRO) MB.jpg" alt="">
+                <h3>CHAIR MARVEL 2(SYNCRO) MB </h3>
+             
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="gr chair 38.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/JAZZ HB DLX.JPG" alt="">
+                <h3>CHAIR JAZZ HB DLX </h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="gr chair 39.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/jazz MB DLX.jpeg" alt="">
+                <h3>CHAIR JAZZ MB DLX </h3>
+                
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="gr chair 40.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/SIGMA HB.jpg" alt="">
+                <h3>CHAIR SIGMA HB </h3>
+             
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="gr chair 41.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/SIGMA MB.jpg" alt="">
+                <h3>CHAIR SIGMA MB </h3>
+                
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="gr chair 42.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/SCORPIO MB.jpg" alt="">
+                <h3>CHAIR SCORPIO MB </h3>
+                
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="gr chair 45.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+       
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/VIRGO MB.jpg" alt="">
+                <h3>CHAIR VIRGO MB</h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR47.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/DYNAMIC MB.jpeg" alt="">
+                <h3>CHAIR DYNAMIC MB</h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR48.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/X MESH MB.jpg" alt="">
+                <h3>CHAIR X MESH MB </h3>
+              
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR49.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/LIBRA WHITE MB.jpg" alt="">
+                <h3>CHAIR LIBRA WHITE MB </h3>
+             
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR50.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/XENA MB.jpg" alt="">
+                <h3>CHAIR XENA MB </h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR51.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/ARRAY NETTED.jpg" alt="">
+                <h3>CHAIR ARRAY NETTED </h3>
+                
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR52.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/802 NETTED.JPG" alt="">
+                <h3>CHAIR 802 NETTED</h3>
+                
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR56.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/803 NETTED.JPG" alt="">
+                <h3>CHAIR 803 NETTED </h3>
+              
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR57.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/ROMEO 805.JPG" alt="">
+                <h3>CHAIR ROMEO(805)</h3>
+             
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR58.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/V NET.jpg" alt="">
+                <h3>CHAIR V NET</h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR60.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/DELUXE MB GREY.jpg" alt="">
+                <h3>CHAIR DELUXE MB GREY </h3>
+                
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="gr chair61.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/RODEO BLACK(804).jpg" alt="">
+                <h3>CHAIR RODEO BLACK(804)</h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR63.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/RODEO (804) WHITE DLX.jpg" alt="">
+                <h3>CHAIR RODEO (804) WHITE DLX</h3>
+                
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR64.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/ZEBRA.jpg" alt="">
+                <h3>CHAIR ZEBRA</h3>
+             
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR65.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/PUFFY .jpg" alt="">
+                <h3>CHAIR PUFFY</h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR66.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/PEARS MB.jpg" alt="">
+                <h3>CHAIR PEARS MB</h3>
+             
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR69.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/TWIN HB.jpg" alt="">
+                <h3>CHAIR TWIN HB</h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR72.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product">
+            <a href="productpage.html"> </a><!-- Add the URL to the product page -->
+               <div class="product-text">
+                <img src="./GRChairs/chair photos/SLEEK SINGLE CUSHION.JPG" alt="">
+                <h3>CHAIR SLEEK SINGLE CUSHION</h3>
+               
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><br>
+                <a href="GR CHAIR74.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+        <!-- Chair Accessories -->
+
+      <center>  <h1>Chair Accessories</h1></center>
+        <style>
+            h1{
+                background-color: #489cb8;
+            box-shadow: #72c2dc;
+            padding-top: 18px;
+            padding-bottom: 18px;
+            }
+            
+        </style>
+    <div class="products-container">
+        
+        <div class="product">
+            
+            <div class="product-text">
+                <img src="./img/chair handle.jpg" alt="">
+                <h3>Chair Handle</h3>
+               
+                <a href="handel.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-text">
+                <img src="./img/mesh back.jfif" alt="">
+                <h3>Chair Mesh Back</h3>
+               
+                <a href="Chair Mesh Back - Copy.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Repeat the product div for each product -->
+
+        <div class="product">
+            <div class="product-text">
+                <img src="./img/chair tilt mechanism.webp" alt="">
+                <h3>chair tilt mechanism</h3>
+                
+                <a href="chair tilt mechanism.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-text">
+                <img src="./img/chair weel.jpg" alt="">
+                <h3>chair wheel</h3>
+                
+                <a href="wheel.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Additional products -->
+
+        <div class="product">
+            <div class="product-text">
+                <img src="./img/chair-base.jpg" alt="">
+                <h3>chair base</h3>
+                
+                <a href="chair-base.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-text">
+                <img src="./img/gas lift cylinder.webp" alt="">
+                <h3>Gas Lift Cylinder</h3>
+                
+                <a href="Gas Lift Cylinder.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-text">
+                <img src="./img/wooden.jpg" alt="">
+                <h3>plywood chair seat</h3>
+             
+                <a href="wooden.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-text">
+                <img src="./img/ Chair seat foam.webp" alt="">
+                <h3>seat foam</h3>
+              
+                <a href="seat foam.html" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('logoutLink').addEventListener('click', function (event) {
+                // Prevent the default behavior of the link
+                event.preventDefault();
+
+                // Show a confirmation message
+                var confirmLogout = confirm('Are you sure you want to logout?');
+
+                // If the user confirms, redirect to the desired page
+                if (confirmLogout) {
+                    window.location.href = 'front-page-login.html'; // Change this to your desired URL
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

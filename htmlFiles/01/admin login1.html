@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="admin login1.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="admin-dashboard" class="dashboard-container">
+    <h2>Welcome Admin</h2>
+    <div class="column-wrapper">
+        <div class="column">
+            <a href="admin-order-history.html"><button class="btn">Orders</button></a>
+            <a href="admin-payment-history.html"><button class="btn">Payment Status</button></a>
+        </div>
+        <div class="column">
+            <a href="feedback-page.html"><button class="btn">Feedback</button></a>
+            <a href="stock-update-page.html"><button class="btn">Stock Update</button></a>
+        </div>
+  </div>
+
+  <script src="admin login1.js"></script>
+</body>
+</html>

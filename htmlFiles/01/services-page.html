@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vertical Dropdown Sections</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .dropdown-container {
+            width: 300px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            display: flex;
+            /* Added to use flexbox */
+            flex-direction: column;
+            /* Changed from row to column */
+        }
+
+        .dropdown-header {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .dropdown-content {
+            display: none;
+            margin-top: 5px;
+            flex-grow: 1;
+            /* Added to allow content to take remaining space */
+        }
+
+        .dropdown-content textarea {
+            width: calc(100% - 20px);
+            /* Adjusted to consider padding */
+            height: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            resize: vertical;
+            font-family: Arial, sans-serif;
+            /* Added to change font */
+            font-size: 14px;
+            /* Adjust font size if needed */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dropdown-container">
+        <button onclick="toggleDropdown('restoration')" class="dropdown-header">Restoration</button>
+        <div class="dropdown-content" id="restoration">
+            <textarea
+                placeholder="We fix up your chairs like new! Our restoration service takes care of any little issues, from adding accessories to repairing defects. Trust us to make your chairs look great and work perfectly again."
+                readonly></textarea>
+        </div>
+    </div>
+
+    <div class="dropdown-container">
+        <button onclick="toggleDropdown('cleaning')" class="dropdown-header">Cleaning</button>
+        <div class="dropdown-content" id="cleaning">
+            <textarea
+                placeholder="Get your chairs sparkling clean with our expert service. We'll wash away dirt and stains and add a protective coating to keep them looking fresh. Say goodbye to grime and hello to chairs that shine!"
+                readonly></textarea>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
